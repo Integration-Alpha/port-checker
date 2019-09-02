@@ -21,17 +21,12 @@ def check_server(address, port):
 if __name__ == '__main__':
     from optparse import OptionParser
     parser = OptionParser()
-
-    #parser.add_option("-a", "--address", dest="address", default='localhost', help="ADDRESS for server", metavar="ADDRESS")
-
-    #parser.add_option("-p", "--port", dest="port", type="int", default=80, help="PORT for server", metavar="PORT")
     parser.add_option("-f", "--filename", dest="filename", help="CSV file with list of addresses and ports", metavar="FILENAME")
 
     (options, args) = parser.parse_args()
     file = open(options.filename, "r")
     lines = file.readlines()
     for line in lines:
-
         address = line.split(',')[0]
         port = int(line.split(',')[1])
 
