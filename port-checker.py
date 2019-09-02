@@ -35,10 +35,4 @@ if __name__ == '__main__':
         print 'check_server returned %s' % check
 
     file.close()
-
-
-
-    
-
-
     sys.exit(not check)
